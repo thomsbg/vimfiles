@@ -34,3 +34,6 @@
 [submodule "bundle/bufstat"]
 	path = bundle/bufstat
 	url = https://github.com/rson/vim-bufstat
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
