@@ -4,6 +4,8 @@ call pathogen#helptags()
 syntax on
 filetype plugin indent on
 
+let mapleader=","
+
 set nocompatible
 set encoding=utf-8
 set backspace=indent,eol,start
