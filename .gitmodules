@@ -31,9 +31,9 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/bufstat"]
-	path = bundle/bufstat
-	url = https://github.com/rson/vim-bufstat
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/buftabs"]
+	path = bundle/buftabs
+	url = https://github.com/vim-scripts/buftabs
