@@ -45,3 +45,6 @@ let g:syntastic_quiet_warnings=1
 " Quick switching between buffers
 nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
+
+" Prevent the escape key from moving the cursor
+inoremap <Esc> <Esc>`^
