@@ -31,8 +31,8 @@ set nowrap
 set autoindent
 set showcmd
 
-" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+" These config files are ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru} set ft=ruby
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
