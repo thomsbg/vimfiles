@@ -18,7 +18,7 @@ set smartcase
 set incsearch
 set nohlsearch
 set laststatus=2
-set statusline=%t\ %y\ [%c,%l]\ %{fugitive#statusline()}
+set statusline=%t\ %y\ [%c,%l]\ %{fugitive#statusline()}\ %P
 set wildmode=list:longest,list:full
 set scrolloff=3
 set backupdir=~/.vim/backup
@@ -48,3 +48,9 @@ nnoremap <C-n> :bnext<CR>
 
 " Prevent the escape key from moving the cursor
 inoremap <Esc> <Esc>`^
+
+" Remember last location in file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+endif
