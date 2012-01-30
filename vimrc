@@ -3,6 +3,7 @@ call pathogen#helptags()
 
 syntax on
 filetype plugin indent on
+colorscheme railscasts
 
 let mapleader=","
 
