@@ -58,3 +58,6 @@
 [submodule "bundle/railscasts"]
 	path = bundle/railscasts
 	url = https://github.com/jgdavey/vim-railscasts.git
+[submodule "bundle/pasta"]
+	path = bundle/pasta
+	url = git://github.com/sickill/vim-pasta.git
