@@ -24,11 +24,21 @@ set showmatch
 set hlsearch
 
 " Shortcuts
+inoremap jj <ESC>
 nnoremap ; :
 nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>a :Ack
+nnoremap <leader>v V`]
+
+" Split window shortcuts
+nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Indentation
 set autoindent
@@ -62,7 +72,7 @@ set cursorline
 set ttyfast
 set laststatus=2
 set statusline=%t\ %y\ [%c,%l]\ %{fugitive#statusline()}\ %P
-set scrolloff=10
+set scrolloff=3
 
 " These config files are ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru} set ft=ruby
