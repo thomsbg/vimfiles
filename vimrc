@@ -7,30 +7,62 @@ colorscheme railscasts
 
 let mapleader=","
 
+" Unorganized
 set nocompatible
+set hidden
 set encoding=utf-8
 set backspace=indent,eol,start
-set title
-set t_Co=256
-set mouse=a
-set hidden
+
+" Searching
+nnoremap / /\v
+vnoremap / /\v
 set ignorecase
 set smartcase
+set gdefault
 set incsearch
-set nohlsearch
-set laststatus=2
-set statusline=%t\ %y\ [%c,%l]\ %{fugitive#statusline()}\ %P
+set showmatch
+set hlsearch
+
+" Shortcuts
+nnoremap ; :
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Indentation
+set autoindent
+
+" Line wrapping
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+
+" Autocompletion
+set wildmenu
 set wildmode=list:longest,list:full
-set scrolloff=3
+
+" Backup / Undo
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
+set undodir=~/.vim/undo
+set undofile
+
+" Visual indicators
+set title
 set number
 set ruler
-set listchars=tab:>-,trail:·
 set list
-set nowrap
-set autoindent
+set listchars=tab:▸\ ,eol:¬
+set relativenumber
 set showcmd
+set visualbell
+set cursorline
+set ttyfast
+set laststatus=2
+set statusline=%t\ %y\ [%c,%l]\ %{fugitive#statusline()}\ %P
+set scrolloff=10
 
 " These config files are ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru} set ft=ruby
