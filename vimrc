@@ -1,9 +1,9 @@
 call pathogen#infect()
 call pathogen#helptags()
 
-syntax on
-filetype plugin indent on
-colorscheme railscasts
+" syntax on
+" filetype plugin indent on
+" colorscheme railscasts
 
 let mapleader=","
 
@@ -47,17 +47,17 @@ set autoindent
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
+" set colorcolumn=85
 
 " Autocompletion
 set wildmenu
 set wildmode=list:longest,list:full
 
 " Backup / Undo
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
-set undodir=~/.vim/undo
-set undofile
+" set backupdir=~/.vim/backup
+" set directory=~/.vim/backup
+" set undodir=~/.vim/undo
+" set undofile
 
 " Visual indicators
 set title
@@ -65,25 +65,25 @@ set number
 set ruler
 set list
 set listchars=tab:▸\ ,eol:¬
-set relativenumber
+" set relativenumber
 set showcmd
 set visualbell
 set cursorline
 set ttyfast
 set laststatus=2
-set statusline=%t\ %y\ [%c,%l]\ %{fugitive#statusline()}\ %P
+" set statusline=%t\ %y\ [%c,%l]\ %{fugitive#statusline()}\ %P
 set scrolloff=3
 
 " These config files are ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru} set ft=ruby
+" au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru} set ft=ruby
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Enable syntastic syntax checking
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
+" let g:syntastic_enable_signs=1
+" let g:syntastic_quiet_warnings=1
 
 " Quick switching between buffers
 nnoremap <C-p> :bprev<CR>
@@ -93,7 +93,7 @@ nnoremap <C-n> :bnext<CR>
 inoremap <Esc> <Esc>`^
 
 " Remember last location in file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal g'\"" | endif
-endif
+" if has("autocmd")
+"   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+"     \| exe "normal g'\"" | endif
+" endif
